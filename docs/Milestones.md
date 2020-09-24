@@ -1,17 +1,4 @@
-# Milestones
 
-Milestones provide opportunities to run custom application code at various important steps throughout the duration of the request.
-
-Resources have properties for each controller action: `create`, `list`, `read`, `update`, and `delete`.
-Also find a meta property `all` as a convenience for hooking into milestones across all controllers.
-Each of those properties in turn has methods for setting custom behavior.
-
-For each milestone on a given controller we accept a function to specify custom behavior. If multiple functions are
-registered for a hook they will be ran in order.
-
-Functions can expect three parameters: a request, a response, and a context object.
-
-For example to run before the main fetch milestone:
 
 ```javascript
 // check the cache first
